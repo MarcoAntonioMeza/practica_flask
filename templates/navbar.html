@@ -1,0 +1,32 @@
+<!--
+<nav>
+    <ul>
+        <img src="{{url_for('static',filename = 'images/flask_img.png')}}" alt="Imagen de Flask">
+        <li>
+            <a href="{{url_for('index')}}">Ir a index</a>
+        </li>
+        <li>
+            <a href="https://www.google.com">Google</a>
+        </li>
+    </ul>
+</nav>
+-->
+
+
+
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Flask</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <img src="{{url_for('static',filename = 'images/flask_img.png')}}" alt="Imagen de Flask">
+
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="{{url_for('index')}}">Ir a index</a></li>
+            <li><a href="https://www.google.com">Google</a></li>
+        </ul>
+    </div>
+</nav>
+

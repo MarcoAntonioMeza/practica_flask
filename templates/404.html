@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+
+{%block titulo %}
+    {{super()}}
+
+    404
+{%endblock%}
+
+{%block contenido%}
+    <h2>Lo sentimos, recurso no disponible :(</h2>
+    <p>{{error}}</p>
+{%endblock%}

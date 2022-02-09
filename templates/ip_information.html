@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macros%}
+<!--Bloque para el titulo-->
+{% block titulo %}
+    {{super()}}
+    Bienvenido al proyecto con Flask
+{% endblock %}
+
+<!--Bloque del contenido-->
+{%block contenido%}
+
+    {% if ip_usuario %}
+        <h2>Hola que tal, tu dirección ip es {{ip_usuario}}</h2>
+    {%else%}
+        <a href="{{ url_for('index')}}">Ir a index</a> 
+
+    {%endif%}
+
+    <ul>
+        {% for item in items%}
+            {{macros.render_items(item)}}
+        {%endfor%}
+    </ul>
+
+{%endblock%}
